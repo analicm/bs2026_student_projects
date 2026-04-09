@@ -13,6 +13,7 @@ sensor_id = df["SensorID"].iloc[0]
 df = df[df["SensorID"] == sensor_id]
 
 # Convert time to numeric
+
 df["TimeNumeric"] = df["RecordedAt"].astype("int64") // 10**9
 
 # Sample for speed (important with 78k rows)
